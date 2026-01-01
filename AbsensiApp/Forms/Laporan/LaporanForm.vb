@@ -20,12 +20,26 @@ Namespace Forms.Laporan
             params.Add("@Mulai", dtpMulai.Value.Date)
             params.Add("@Selesai", dtpSelesai.Value.Date)
 
-            ' Check Role
-            Dim mainForm As MainForm = CType(Application.OpenForms("MainForm"), MainForm)
-            If mainForm.CurrentUser.Role = "Karyawan" Then
-                If mainForm.CurrentUser.KaryawanID.HasValue Then
+            ' Check Role - support both MainForm and MainFormKaryawan
+            Dim currentUser As Models.User = Nothing
+
+            ' Try to get user from MainFormKaryawan (for Karyawan role)
+            Dim karyawanForm As MainFormKaryawan = CType(Application.OpenForms("MainFormKaryawan"), MainFormKaryawan)
+            If karyawanForm IsNot Nothing Then
+                currentUser = karyawanForm.CurrentUser
+            Else
+                ' Try to get user from MainForm (for Admin/HR/Atasan)
+                Dim mainForm As MainForm = CType(Application.OpenForms("MainForm"), MainForm)
+                If mainForm IsNot Nothing Then
+                    currentUser = mainForm.CurrentUser
+                End If
+            End If
+
+            ' Filter by KaryawanID if user is Karyawan
+            If currentUser IsNot Nothing AndAlso currentUser.Role = "Karyawan" Then
+                If currentUser.KaryawanID.HasValue Then
                     query &= " AND a.KaryawanID = @KaryawanID"
-                    params.Add("@KaryawanID", mainForm.CurrentUser.KaryawanID.Value)
+                    params.Add("@KaryawanID", currentUser.KaryawanID.Value)
                 End If
             End If
 

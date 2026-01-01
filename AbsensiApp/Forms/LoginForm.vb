@@ -56,10 +56,18 @@ Namespace Forms
             End If
 
             If user IsNot Nothing Then
-                ' Open Main Form
-                Dim mainForm As New MainForm()
-                mainForm.CurrentUser = user
-                mainForm.Show()
+                ' Open appropriate Main Form based on role
+                If user.Role = "Karyawan" Then
+                    ' Karyawan gets their own simplified form
+                    Dim karyawanForm As New MainFormKaryawan()
+                    karyawanForm.CurrentUser = user
+                    karyawanForm.Show()
+                Else
+                    ' Admin, HR, Atasan get the full admin form
+                    Dim adminForm As New MainForm()
+                    adminForm.CurrentUser = user
+                    adminForm.Show()
+                End If
                 Me.Hide()
             Else
                 MessageBox.Show("Username atau Password salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
