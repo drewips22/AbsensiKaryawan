@@ -19,9 +19,9 @@ Namespace Forms
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             components = New ComponentModel.Container()
-            Dim DataGridViewCellStyle19 As DataGridViewCellStyle = New DataGridViewCellStyle()
-            Dim DataGridViewCellStyle20 As DataGridViewCellStyle = New DataGridViewCellStyle()
-            Dim DataGridViewCellStyle21 As DataGridViewCellStyle = New DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
             MenuStrip1 = New MenuStrip()
             FileToolStripMenuItem = New ToolStripMenuItem()
             LogoutToolStripMenuItem = New ToolStripMenuItem()
@@ -63,8 +63,8 @@ Namespace Forms
             lblHadirCount = New Label()
             lblHadirIcon = New Label()
             pnlTerlambat = New Panel()
-            lblTerlambatTitle = New Label()
             lblTerlambatCount = New Label()
+            lblTerlambatTitle = New Label()
             lblTerlambatIcon = New Label()
             pnlPending = New Panel()
             lblPendingTitle = New Label()
@@ -245,32 +245,32 @@ Namespace Forms
             ' 
             dgvAbsensi.AllowUserToAddRows = False
             dgvAbsensi.AllowUserToDeleteRows = False
-            DataGridViewCellStyle19.BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
-            dgvAbsensi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
+            DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(250))
+            dgvAbsensi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             dgvAbsensi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
             dgvAbsensi.BackgroundColor = Color.White
             dgvAbsensi.BorderStyle = BorderStyle.None
             dgvAbsensi.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-            DataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle20.BackColor = Color.FromArgb(CByte(45), CByte(52), CByte(64))
-            DataGridViewCellStyle20.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
-            DataGridViewCellStyle20.ForeColor = Color.White
-            DataGridViewCellStyle20.Padding = New Padding(10)
-            DataGridViewCellStyle20.SelectionBackColor = SystemColors.Highlight
-            DataGridViewCellStyle20.SelectionForeColor = SystemColors.HighlightText
-            DataGridViewCellStyle20.WrapMode = DataGridViewTriState.True
-            dgvAbsensi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
+            DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(45), CByte(52), CByte(64))
+            DataGridViewCellStyle2.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+            DataGridViewCellStyle2.ForeColor = Color.White
+            DataGridViewCellStyle2.Padding = New Padding(10)
+            DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+            DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+            dgvAbsensi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             dgvAbsensi.ColumnHeadersHeight = 45
             dgvAbsensi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-            DataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle21.BackColor = SystemColors.Window
-            DataGridViewCellStyle21.Font = New Font("Segoe UI", 10.0F)
-            DataGridViewCellStyle21.ForeColor = SystemColors.ControlText
-            DataGridViewCellStyle21.Padding = New Padding(5)
-            DataGridViewCellStyle21.SelectionBackColor = SystemColors.Highlight
-            DataGridViewCellStyle21.SelectionForeColor = SystemColors.HighlightText
-            DataGridViewCellStyle21.WrapMode = DataGridViewTriState.False
-            dgvAbsensi.DefaultCellStyle = DataGridViewCellStyle21
+            DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle3.BackColor = SystemColors.Window
+            DataGridViewCellStyle3.Font = New Font("Segoe UI", 10F)
+            DataGridViewCellStyle3.ForeColor = SystemColors.ControlText
+            DataGridViewCellStyle3.Padding = New Padding(5)
+            DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+            DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+            DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+            dgvAbsensi.DefaultCellStyle = DataGridViewCellStyle3
             dgvAbsensi.Dock = DockStyle.Fill
             dgvAbsensi.EnableHeadersVisualStyles = False
             dgvAbsensi.GridColor = Color.FromArgb(CByte(230), CByte(230), CByte(230))
@@ -287,7 +287,7 @@ Namespace Forms
             ' lblAbsensiTitle
             ' 
             lblAbsensiTitle.Dock = DockStyle.Top
-            lblAbsensiTitle.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
+            lblAbsensiTitle.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
             lblAbsensiTitle.ForeColor = Color.FromArgb(CByte(45), CByte(52), CByte(64))
             lblAbsensiTitle.Location = New Point(20, 20)
             lblAbsensiTitle.Name = "lblAbsensiTitle"
@@ -317,7 +317,7 @@ Namespace Forms
             btnAbsenMasuk.Cursor = Cursors.Hand
             btnAbsenMasuk.FlatAppearance.BorderSize = 0
             btnAbsenMasuk.FlatStyle = FlatStyle.Flat
-            btnAbsenMasuk.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
+            btnAbsenMasuk.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
             btnAbsenMasuk.ForeColor = Color.White
             btnAbsenMasuk.Location = New Point(0, 10)
             btnAbsenMasuk.Margin = New Padding(0, 0, 10, 0)
@@ -334,7 +334,7 @@ Namespace Forms
             btnAbsenPulang.Cursor = Cursors.Hand
             btnAbsenPulang.FlatAppearance.BorderSize = 0
             btnAbsenPulang.FlatStyle = FlatStyle.Flat
-            btnAbsenPulang.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
+            btnAbsenPulang.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
             btnAbsenPulang.ForeColor = Color.White
             btnAbsenPulang.Location = New Point(170, 10)
             btnAbsenPulang.Margin = New Padding(0, 0, 10, 0)
@@ -351,7 +351,7 @@ Namespace Forms
             btnInputAbsensi.Cursor = Cursors.Hand
             btnInputAbsensi.FlatAppearance.BorderSize = 0
             btnInputAbsensi.FlatStyle = FlatStyle.Flat
-            btnInputAbsensi.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
+            btnInputAbsensi.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
             btnInputAbsensi.ForeColor = Color.White
             btnInputAbsensi.Location = New Point(340, 10)
             btnInputAbsensi.Margin = New Padding(0, 0, 10, 0)
@@ -367,7 +367,7 @@ Namespace Forms
             btnLihatLaporan.Cursor = Cursors.Hand
             btnLihatLaporan.FlatAppearance.BorderSize = 0
             btnLihatLaporan.FlatStyle = FlatStyle.Flat
-            btnLihatLaporan.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
+            btnLihatLaporan.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
             btnLihatLaporan.ForeColor = Color.White
             btnLihatLaporan.Location = New Point(510, 10)
             btnLihatLaporan.Margin = New Padding(0, 0, 10, 0)
@@ -383,7 +383,7 @@ Namespace Forms
             btnRefresh.Cursor = Cursors.Hand
             btnRefresh.FlatAppearance.BorderSize = 0
             btnRefresh.FlatStyle = FlatStyle.Flat
-            btnRefresh.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
+            btnRefresh.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
             btnRefresh.ForeColor = Color.White
             btnRefresh.Location = New Point(683, 13)
             btnRefresh.Name = "btnRefresh"
@@ -408,7 +408,7 @@ Namespace Forms
             ' 
             ' lblEmployeeStatusInfo
             ' 
-            lblEmployeeStatusInfo.Font = New Font("Segoe UI", 12.0F)
+            lblEmployeeStatusInfo.Font = New Font("Segoe UI", 12F)
             lblEmployeeStatusInfo.ForeColor = Color.Gray
             lblEmployeeStatusInfo.Location = New Point(20, 50)
             lblEmployeeStatusInfo.Name = "lblEmployeeStatusInfo"
@@ -418,7 +418,7 @@ Namespace Forms
             ' 
             ' lblEmployeeStatusTitle
             ' 
-            lblEmployeeStatusTitle.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
+            lblEmployeeStatusTitle.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
             lblEmployeeStatusTitle.ForeColor = Color.FromArgb(CByte(45), CByte(52), CByte(64))
             lblEmployeeStatusTitle.Location = New Point(20, 15)
             lblEmployeeStatusTitle.Name = "lblEmployeeStatusTitle"
@@ -454,7 +454,7 @@ Namespace Forms
             ' 
             ' lblKaryawanTitle
             ' 
-            lblKaryawanTitle.Font = New Font("Segoe UI", 10.0F)
+            lblKaryawanTitle.Font = New Font("Segoe UI", 10F)
             lblKaryawanTitle.ForeColor = Color.Gray
             lblKaryawanTitle.Location = New Point(70, 62)
             lblKaryawanTitle.Name = "lblKaryawanTitle"
@@ -464,7 +464,7 @@ Namespace Forms
             ' 
             ' lblKaryawanCount
             ' 
-            lblKaryawanCount.Font = New Font("Segoe UI", 28.0F, FontStyle.Bold)
+            lblKaryawanCount.Font = New Font("Segoe UI", 28F, FontStyle.Bold)
             lblKaryawanCount.ForeColor = Color.FromArgb(CByte(45), CByte(52), CByte(64))
             lblKaryawanCount.Location = New Point(71, 2)
             lblKaryawanCount.Name = "lblKaryawanCount"
@@ -475,7 +475,7 @@ Namespace Forms
             ' 
             ' lblKaryawanIcon
             ' 
-            lblKaryawanIcon.Font = New Font("Segoe UI Emoji", 24.0F)
+            lblKaryawanIcon.Font = New Font("Segoe UI Emoji", 24F)
             lblKaryawanIcon.Location = New Point(3, 20)
             lblKaryawanIcon.Name = "lblKaryawanIcon"
             lblKaryawanIcon.Size = New Size(62, 50)
@@ -496,7 +496,7 @@ Namespace Forms
             ' 
             ' lblHadirTitle
             ' 
-            lblHadirTitle.Font = New Font("Segoe UI", 10.0F)
+            lblHadirTitle.Font = New Font("Segoe UI", 10F)
             lblHadirTitle.ForeColor = Color.Gray
             lblHadirTitle.Location = New Point(70, 60)
             lblHadirTitle.Name = "lblHadirTitle"
@@ -506,7 +506,7 @@ Namespace Forms
             ' 
             ' lblHadirCount
             ' 
-            lblHadirCount.Font = New Font("Segoe UI", 28.0F, FontStyle.Bold)
+            lblHadirCount.Font = New Font("Segoe UI", 28F, FontStyle.Bold)
             lblHadirCount.ForeColor = Color.FromArgb(CByte(40), CByte(167), CByte(69))
             lblHadirCount.Location = New Point(70, 8)
             lblHadirCount.Name = "lblHadirCount"
@@ -517,7 +517,7 @@ Namespace Forms
             ' 
             ' lblHadirIcon
             ' 
-            lblHadirIcon.Font = New Font("Segoe UI Emoji", 24.0F)
+            lblHadirIcon.Font = New Font("Segoe UI Emoji", 24F)
             lblHadirIcon.Location = New Point(3, 20)
             lblHadirIcon.Name = "lblHadirIcon"
             lblHadirIcon.Size = New Size(61, 50)
@@ -536,19 +536,9 @@ Namespace Forms
             pnlTerlambat.Size = New Size(200, 100)
             pnlTerlambat.TabIndex = 2
             ' 
-            ' lblTerlambatTitle
-            ' 
-            lblTerlambatTitle.Font = New Font("Segoe UI", 10.0F)
-            lblTerlambatTitle.ForeColor = Color.Gray
-            lblTerlambatTitle.Location = New Point(70, 60)
-            lblTerlambatTitle.Name = "lblTerlambatTitle"
-            lblTerlambatTitle.Size = New Size(120, 25)
-            lblTerlambatTitle.TabIndex = 0
-            lblTerlambatTitle.Text = "Terlambat"
-            ' 
             ' lblTerlambatCount
             ' 
-            lblTerlambatCount.Font = New Font("Segoe UI", 28.0F, FontStyle.Bold)
+            lblTerlambatCount.Font = New Font("Segoe UI", 28F, FontStyle.Bold)
             lblTerlambatCount.ForeColor = Color.FromArgb(CByte(255), CByte(153), CByte(0))
             lblTerlambatCount.Location = New Point(70, 8)
             lblTerlambatCount.Name = "lblTerlambatCount"
@@ -557,9 +547,19 @@ Namespace Forms
             lblTerlambatCount.Text = "0"
             lblTerlambatCount.TextAlign = ContentAlignment.MiddleLeft
             ' 
+            ' lblTerlambatTitle
+            ' 
+            lblTerlambatTitle.Font = New Font("Segoe UI", 10F)
+            lblTerlambatTitle.ForeColor = Color.Gray
+            lblTerlambatTitle.Location = New Point(70, 60)
+            lblTerlambatTitle.Name = "lblTerlambatTitle"
+            lblTerlambatTitle.Size = New Size(120, 25)
+            lblTerlambatTitle.TabIndex = 0
+            lblTerlambatTitle.Text = "Terlambat"
+            ' 
             ' lblTerlambatIcon
             ' 
-            lblTerlambatIcon.Font = New Font("Segoe UI Emoji", 24.0F)
+            lblTerlambatIcon.Font = New Font("Segoe UI Emoji", 24F)
             lblTerlambatIcon.Location = New Point(3, 20)
             lblTerlambatIcon.Name = "lblTerlambatIcon"
             lblTerlambatIcon.Size = New Size(61, 50)
@@ -580,7 +580,7 @@ Namespace Forms
             ' 
             ' lblPendingTitle
             ' 
-            lblPendingTitle.Font = New Font("Segoe UI", 10.0F)
+            lblPendingTitle.Font = New Font("Segoe UI", 10F)
             lblPendingTitle.ForeColor = Color.Gray
             lblPendingTitle.Location = New Point(70, 60)
             lblPendingTitle.Name = "lblPendingTitle"
@@ -590,7 +590,7 @@ Namespace Forms
             ' 
             ' lblPendingCount
             ' 
-            lblPendingCount.Font = New Font("Segoe UI", 28.0F, FontStyle.Bold)
+            lblPendingCount.Font = New Font("Segoe UI", 28F, FontStyle.Bold)
             lblPendingCount.ForeColor = Color.FromArgb(CByte(0), CByte(122), CByte(204))
             lblPendingCount.Location = New Point(70, 10)
             lblPendingCount.Name = "lblPendingCount"
@@ -601,7 +601,7 @@ Namespace Forms
             ' 
             ' lblPendingIcon
             ' 
-            lblPendingIcon.Font = New Font("Segoe UI Emoji", 24.0F)
+            lblPendingIcon.Font = New Font("Segoe UI Emoji", 24F)
             lblPendingIcon.Location = New Point(3, 20)
             lblPendingIcon.Name = "lblPendingIcon"
             lblPendingIcon.Size = New Size(61, 50)
@@ -623,7 +623,7 @@ Namespace Forms
             ' lblTime
             ' 
             lblTime.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-            lblTime.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold)
+            lblTime.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
             lblTime.ForeColor = Color.FromArgb(CByte(0), CByte(122), CByte(204))
             lblTime.Location = New Point(1760, 35)
             lblTime.Name = "lblTime"
@@ -635,7 +635,7 @@ Namespace Forms
             ' lblDateTime
             ' 
             lblDateTime.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-            lblDateTime.Font = New Font("Segoe UI", 11.0F)
+            lblDateTime.Font = New Font("Segoe UI", 11F)
             lblDateTime.ForeColor = Color.FromArgb(CByte(100), CByte(100), CByte(100))
             lblDateTime.Location = New Point(1760, 10)
             lblDateTime.Name = "lblDateTime"
@@ -646,7 +646,7 @@ Namespace Forms
             ' 
             ' lblWelcome
             ' 
-            lblWelcome.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold)
+            lblWelcome.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
             lblWelcome.ForeColor = Color.FromArgb(CByte(45), CByte(52), CByte(64))
             lblWelcome.Location = New Point(3, 9)
             lblWelcome.Name = "lblWelcome"

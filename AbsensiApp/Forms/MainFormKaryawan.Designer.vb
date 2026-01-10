@@ -162,7 +162,7 @@ Namespace Forms
             dgvHistory.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
             DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(25), CByte(135), CByte(84))
-            DataGridViewCellStyle2.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+            DataGridViewCellStyle2.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
             DataGridViewCellStyle2.ForeColor = Color.White
             DataGridViewCellStyle2.Padding = New Padding(10)
             DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
@@ -173,7 +173,7 @@ Namespace Forms
             dgvHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
             DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = SystemColors.Window
-            DataGridViewCellStyle3.Font = New Font("Segoe UI", 10.0F)
+            DataGridViewCellStyle3.Font = New Font("Segoe UI", 10F)
             DataGridViewCellStyle3.ForeColor = SystemColors.ControlText
             DataGridViewCellStyle3.Padding = New Padding(5)
             DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
@@ -196,7 +196,7 @@ Namespace Forms
             ' lblHistoryTitle
             ' 
             lblHistoryTitle.Dock = DockStyle.Top
-            lblHistoryTitle.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
+            lblHistoryTitle.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
             lblHistoryTitle.ForeColor = Color.FromArgb(CByte(45), CByte(52), CByte(64))
             lblHistoryTitle.Location = New Point(25, 25)
             lblHistoryTitle.Name = "lblHistoryTitle"
@@ -221,7 +221,7 @@ Namespace Forms
             ' 
             ' lblAbsenInfo
             ' 
-            lblAbsenInfo.Font = New Font("Segoe UI", 11.0F, FontStyle.Italic)
+            lblAbsenInfo.Font = New Font("Segoe UI", 11F, FontStyle.Italic)
             lblAbsenInfo.ForeColor = Color.Gray
             lblAbsenInfo.Location = New Point(570, 65)
             lblAbsenInfo.Name = "lblAbsenInfo"
@@ -235,7 +235,7 @@ Namespace Forms
             btnAbsenPulang.Cursor = Cursors.Hand
             btnAbsenPulang.FlatAppearance.BorderSize = 0
             btnAbsenPulang.FlatStyle = FlatStyle.Flat
-            btnAbsenPulang.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
+            btnAbsenPulang.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
             btnAbsenPulang.ForeColor = Color.White
             btnAbsenPulang.Location = New Point(295, 40)
             btnAbsenPulang.Name = "btnAbsenPulang"
@@ -250,7 +250,7 @@ Namespace Forms
             btnAbsenMasuk.Cursor = Cursors.Hand
             btnAbsenMasuk.FlatAppearance.BorderSize = 0
             btnAbsenMasuk.FlatStyle = FlatStyle.Flat
-            btnAbsenMasuk.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
+            btnAbsenMasuk.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
             btnAbsenMasuk.ForeColor = Color.White
             btnAbsenMasuk.Location = New Point(25, 40)
             btnAbsenMasuk.Name = "btnAbsenMasuk"
@@ -274,7 +274,7 @@ Namespace Forms
             ' 
             ' lblStatusInfo
             ' 
-            lblStatusInfo.Font = New Font("Segoe UI", 13.0F)
+            lblStatusInfo.Font = New Font("Segoe UI", 13F)
             lblStatusInfo.ForeColor = Color.Gray
             lblStatusInfo.Location = New Point(120, 60)
             lblStatusInfo.Name = "lblStatusInfo"
@@ -284,7 +284,7 @@ Namespace Forms
             ' 
             ' lblStatusTitle
             ' 
-            lblStatusTitle.Font = New Font("Segoe UI", 16.0F, FontStyle.Bold)
+            lblStatusTitle.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
             lblStatusTitle.ForeColor = Color.FromArgb(CByte(45), CByte(52), CByte(64))
             lblStatusTitle.Location = New Point(120, 25)
             lblStatusTitle.Name = "lblStatusTitle"
@@ -294,7 +294,7 @@ Namespace Forms
             ' 
             ' lblStatusIcon
             ' 
-            lblStatusIcon.Font = New Font("Segoe UI Emoji", 40.0F)
+            lblStatusIcon.Font = New Font("Segoe UI Emoji", 40F)
             lblStatusIcon.Location = New Point(25, 20)
             lblStatusIcon.Name = "lblStatusIcon"
             lblStatusIcon.Size = New Size(80, 80)
@@ -317,7 +317,7 @@ Namespace Forms
             ' lblTime
             ' 
             lblTime.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-            lblTime.Font = New Font("Segoe UI", 32.0F, FontStyle.Bold)
+            lblTime.Font = New Font("Segoe UI", 32F, FontStyle.Bold)
             lblTime.ForeColor = Color.FromArgb(CByte(25), CByte(135), CByte(84))
             lblTime.Location = New Point(1690, 40)
             lblTime.Name = "lblTime"
@@ -329,7 +329,7 @@ Namespace Forms
             ' lblDateTime
             ' 
             lblDateTime.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-            lblDateTime.Font = New Font("Segoe UI", 12.0F)
+            lblDateTime.Font = New Font("Segoe UI", 12F)
             lblDateTime.ForeColor = Color.FromArgb(CByte(100), CByte(100), CByte(100))
             lblDateTime.Location = New Point(1690, 15)
             lblDateTime.Name = "lblDateTime"
@@ -340,7 +340,7 @@ Namespace Forms
             ' 
             ' lblWelcome
             ' 
-            lblWelcome.Font = New Font("Segoe UI", 22.0F, FontStyle.Bold)
+            lblWelcome.Font = New Font("Segoe UI", 22F, FontStyle.Bold)
             lblWelcome.ForeColor = Color.FromArgb(CByte(25), CByte(135), CByte(84))
             lblWelcome.Location = New Point(3, 10)
             lblWelcome.Name = "lblWelcome"
@@ -360,7 +360,7 @@ Namespace Forms
             ' 
             ' MainFormKaryawan
             ' 
-            AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+            AutoScaleDimensions = New SizeF(8F, 20F)
             AutoScaleMode = AutoScaleMode.Font
             ClientSize = New Size(1200, 700)
             Controls.Add(pnlMain)

@@ -257,5 +257,9 @@ Namespace Forms
         Private Sub MainFormKaryawan_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
             ' Form closed
         End Sub
+
+        Private Sub pnlHeader_Paint(sender As Object, e As PaintEventArgs) Handles pnlHeader.Paint
+
+        End Sub
     End Class
 End Namespace
