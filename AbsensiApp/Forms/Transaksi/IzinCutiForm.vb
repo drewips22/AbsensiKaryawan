@@ -13,21 +13,28 @@ Namespace Forms.Transaksi
         End Sub
 
         Private Sub InitializeCustomUI()
-            ' Add DataGridView for history/approvals
+            ' Add DataGridView for history/approvals - positioned below the form inputs
             dgvRequests = New DataGridView()
-            dgvRequests.Location = New Point(20, 250)
-            dgvRequests.Size = New Size(740, 300)
+            dgvRequests.Location = New Point(20, 285)
+            dgvRequests.Size = New Size(760, 250)
             dgvRequests.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
             dgvRequests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
             dgvRequests.AllowUserToAddRows = False
             dgvRequests.ReadOnly = True
             dgvRequests.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            dgvRequests.BackgroundColor = Color.White
+            dgvRequests.BorderStyle = BorderStyle.None
+            dgvRequests.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 122, 204)
+            dgvRequests.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+            dgvRequests.ColumnHeadersDefaultCellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+            dgvRequests.EnableHeadersVisualStyles = False
+            dgvRequests.RowHeadersVisible = False
             Me.Controls.Add(dgvRequests)
 
             ' Add Context Menu for Approval (Admin only)
             Dim ctxMenu As New ContextMenuStrip()
-            Dim itemApprove As New ToolStripMenuItem("Setujui")
-            Dim itemReject As New ToolStripMenuItem("Tolak")
+            Dim itemApprove As New ToolStripMenuItem("✅ Setujui")
+            Dim itemReject As New ToolStripMenuItem("❌ Tolak")
             AddHandler itemApprove.Click, AddressOf ApproveRequest
             AddHandler itemReject.Click, AddressOf RejectRequest
             ctxMenu.Items.Add(itemApprove)
@@ -38,8 +45,23 @@ Namespace Forms.Transaksi
         Private Sub IzinCutiForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             LoadKaryawan()
             
-            Dim mainForm As MainForm = CType(Application.OpenForms("MainForm"), MainForm)
-            _currentUser = mainForm.CurrentUser
+            ' Get current user - support both MainForm and MainFormKaryawan
+            Dim karyawanForm As MainFormKaryawan = CType(Application.OpenForms("MainFormKaryawan"), MainFormKaryawan)
+            If karyawanForm IsNot Nothing Then
+                _currentUser = karyawanForm.CurrentUser
+            Else
+                Dim mainForm As MainForm = CType(Application.OpenForms("MainForm"), MainForm)
+                If mainForm IsNot Nothing Then
+                    _currentUser = mainForm.CurrentUser
+                End If
+            End If
+
+            ' Check if user was found
+            If _currentUser Is Nothing Then
+                MessageBox.Show("Error: Tidak dapat mendeteksi user yang login!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.Close()
+                Return
+            End If
 
             If _currentUser.Role = "Karyawan" Then
                 ' Karyawan View: Request Form + Own History
